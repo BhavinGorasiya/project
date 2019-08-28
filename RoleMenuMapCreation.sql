@@ -1,0 +1,2 @@
+create table RoleMenuMap(Id int primary key not null identity(1,1), RoleId int foreign key references RoleMaster(Id) not null, MenuId int foreign key references MenuMaster(Id) not null);
+alter table RoleMenuMap add constraint UQ_RoleMenu_RoleId_MenuId unique (RoleId,MenuId);
